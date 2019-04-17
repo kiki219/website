@@ -13,8 +13,10 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<!-- internal stylesheet -->
 		<style>
-			body {
+			#main {
 				margin-top: 90px;
+			}
+			body {
 				font-family: '', Arial, sans-serif;
 				background-color: black;
 			}
@@ -82,17 +84,23 @@
 
 		</style>
 
+
+
+	</head>
+
+	<body> <!-- classes not discussed in lessons:  -->
+
 		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="XHI"></a>
-					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
+				<div class="collapse navbar-collapse" id="headerNav">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="manual" style="background-color:transparent;"
 							data-placement="bottom" title="" data-content="<a href='music/lost-words.html'>Lost Words</a>">
@@ -103,12 +111,7 @@
 			</div>
 		</nav>
 
-	</head>
-
-	<body>
-
-
-		<div class="container">
+		<div class="container" id="main">
 			<!--- ACCORDION --->
 			<div class="panel-group" id="accordion">
 				<div class="panel panel-success">
@@ -241,23 +244,6 @@
 		</div>
 
 		<script>
-			$(function(){
-			$('[data-toggle="tooltip"]').tooltip();
-			});
-		</script>
-
-		<script>
-			$(function(){
-				$('.carousel').carousel({
-					interval: 6000,
-					pause: true,
-					wrap: true,
-					keyboard: true
-					});
-				});
-		</script>
-
-		<script>
 			$(function() {
 			$('[data-toggle="popover"]').popover({html:true})
 			});
@@ -267,8 +253,7 @@
 			  console.log("clicked inside popover")
 			  e.preventDefault()
 			});
-		</script>
-		<script>
+
 			$('[data-trigger="manual"]').click(function() {
 			  $(this).popover('toggle');
 			}).blur(function() {
