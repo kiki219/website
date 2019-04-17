@@ -16,6 +16,7 @@
 			body {
 			margin-top: 90px;
 			font-family: '', Arial, sans-serif;
+			background-color: black;
 			}
 			.container,
 			.container-fluid {
@@ -27,23 +28,7 @@
 			padding-right: 15px;
 			padding-left: 15px;
 			}
-			#carousel {
-			padding-bottom: 30px;
-			}
-			.carousel-caption {
-			max-width: 100%;
-			width:100%;
-			background-color: rgba(0, 0, 0, 0.65);
-			padding-top: 0px;
-			padding-bottom: 40px;
-			left: 0;
-			text-align:center;
-			text-color:white;
-			}
-			.jumbotron {
-			padding-top: 80px;
-			}
-			@media (max-width: 996px;) {
+		@media (max-width: 996px;) {
 			.navbar-header {
 			float: none;
 			}
@@ -94,11 +79,12 @@
 			border-radius: 0;
 			box-shadow: 2px 6px 10px rgba(0, 0, 0, .01);
 			}
+
 		</style>
 		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="index.html" class="navbar-brand"><img src="../img/logo.png" alt="XHI"></a>
+					<a href="../index.html" class="navbar-brand"><img src="../img/logo.png" alt="XHI"></a>
 					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -107,14 +93,9 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="manual"
+						<li><a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="manual" style="background-color:transparent;"
 							data-placement="bottom" title="" data-content="<a href='../music/lost-words.html'>Lost Words</a>">
-							+ Music</a>
-						</li>
-						<li><a href="#">Browse</a></li>
-						<li><a href="#">Ordering</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+							+ Music</a></li>
 					</ul>
 				</div>
 			</div>

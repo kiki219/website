@@ -16,6 +16,7 @@
 			body {
 				margin-top: 90px;
 				font-family: '', Arial, sans-serif;
+				background-color: black;
 			}
 			.container,
 			.container-fluid {
@@ -26,22 +27,6 @@
 			padding: 5px;
 			padding-right: 15px;
 			padding-left: 15px;
-			}
-			#carousel {
-			padding-bottom: 30px;
-			}
-			.carousel-caption {
-			max-width: 100%;
-			width:100%;
-			background-color: rgba(0, 0, 0, 0.65);
-			padding-top: 0px;
-			padding-bottom: 40px;
-			left: 0;
-			text-align:center;
-			text-color:white;
-			}
-			.jumbotron {
-			padding-top: 80px;
 			}
 			@media (max-width: 996px;) {
 			.navbar-header {
@@ -90,11 +75,14 @@
 				padding: 0px;
 			}
 			.popover{
-    	width: 200%;
-	}
+			width: 200%;
+			border-radius: 0;
+			box-shadow: 2px 6px 10px rgba(0, 0, 0, .01);
+			}
+
 		</style>
 
-		<nav class="navbar navbar-default navbar-fixed-top">
+		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="XHI"></a>
@@ -106,13 +94,9 @@
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" role="button" class="btn popovers" data-toggle="popover"
+						<li><a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="manual" style="background-color:transparent;"
 							data-placement="bottom" title="" data-content="<a href='music/lost-words.html'>Lost Words</a>">
 							+ Music</a></li>
-						<li><a href="#">Browse</a></li>
-						<li><a href="#">Ordering</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
 					</ul>
 
 				</div>
@@ -261,6 +245,7 @@
 			$('[data-toggle="tooltip"]').tooltip();
 			});
 		</script>
+
 		<script>
 			$(function(){
 				$('.carousel').carousel({
@@ -271,17 +256,25 @@
 					});
 				});
 		</script>
-		<script>
-			$("[data-toggle=popover]")
-			.popover({html:true})
 
+		<script>
+			$(function() {
+			$('[data-toggle="popover"]').popover({html:true})
+			});
+
+			$('body')
+			.on('mousedown', '.popover', function(e) {
+			  console.log("clicked inside popover")
+			  e.preventDefault()
+			});
 		</script>
 		<script>
-		$('body')
-  .on('mousedown', '.popover', function(e) {
-    e.preventDefault()
-  });
-});
-</script>
+			$('[data-trigger="manual"]').click(function() {
+			  $(this).popover('toggle');
+			}).blur(function() {
+			  $(this).popover('hide');
+			});
+		</script>
+
 		</body>
 		</html>
