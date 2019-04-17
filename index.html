@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Task 5</title>
+		<!-- CSS refs -->
+		<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+		<link rel="stylesheet" href="webfontkit/font.css">
+		<!-- script refs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<!-- internal stylesheet -->
+		<style>
+			body {
+				margin-top: 90px;
+				font-family: '', Arial, sans-serif;
+			}
+			.container,
+			.container-fluid {
+			margin: 0 auto;
+			height: auto;
+			}
+			.navbar {
+			padding: 5px;
+			padding-right: 15px;
+			padding-left: 15px;
+			}
+			#carousel {
+			padding-bottom: 30px;
+			}
+			.carousel-caption {
+			max-width: 100%;
+			width:100%;
+			background-color: rgba(0, 0, 0, 0.65);
+			padding-top: 0px;
+			padding-bottom: 40px;
+			left: 0;
+			text-align:center;
+			text-color:white;
+			}
+			.jumbotron {
+			padding-top: 80px;
+			}
+			@media (max-width: 996px;) {
+			.navbar-header {
+			float: none;
+			}
+			.navbar-left,.navbar-right {
+			float: none !important;
+			}
+			.navbar-toggle {
+			display: block;
+			}
+			.navbar-collapse {
+			border-top: 1px solid transparent;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+			}
+			.navbar-fixed-top {
+			top: 0;
+			border-width: 0 0 1px;
+			}
+			.navbar-collapse.collapse {
+			display: none!important;
+			}
+			.navbar-nav {
+			float: none!important;
+			margin-top: 7.5px;
+			}
+			.navbar-nav>li {
+			float: none;
+			}
+			.navbar-nav>li>a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			}
+			.collapse.in{
+			display:block !important;
+			}
+			}
+			img{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			}
+		}
+			.navbar-brand {
+				margin: 0px;
+				padding: 0px;
+			}
+			.popover{
+    	width: 200%;
+	}
+		</style>
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="XHI"></a>
+					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" role="button" class="btn popovers" data-toggle="popover"
+							data-placement="bottom" title="" data-content="<a href='music/lost-words.html'>Lost Words</a>">
+							+ Music</a></li>
+						<li><a href="#">Browse</a></li>
+						<li><a href="#">Ordering</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+
+	</head>
+
+	<body>
+
+
+		<div class="container">
+			<!--- ACCORDION --->
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-target="#panel-1" data-toggle="collapse" data-parent="#accordion">Accordion 1</h3>
+					</div>
+					<div class="panel-collapse collapse" id="panel-1">
+						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
+					</div>
+				</div>
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-target="#panel-2" data-toggle="collapse" data-parent="#accordion">Accordion 2</h3>
+					</div>
+					<div class="panel-collapse collapse" id="panel-2">
+						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
+					</div>
+				</div>
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-target="#panel-3" data-toggle="collapse" data-parent="#accordion">Accordion 3</h3>
+					</div>
+					<div class="panel-collapse collapse" id="panel-3">
+						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
+					</div>
+				</div>
+			</div>
+			<!--- END ACCORDION --->
+			<!--- MODAL POPUP --->
+			<div class="modal" id="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" type="button" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+							<h2 class="modal-title">This is a modal popup!</h2>
+						</div>
+						<div class="modal-body">
+							<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page. Click outside of this box or the 'X' to dismiss.</p>
+						</div>
+					</div>
+					<!-- end .modal-content -->
+				</div>
+				<!-- end .modal-dialog -->
+			</div>
+			<!-- end .modal -->
+			<!--- END MODAL --->
+			<div class="row">
+				<div class="col-xs-6 col-sm-3">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<p class="panel-title">Forms</p>
+						</div>
+						<div class="panel-body">
+							<form>
+								<div class="form-group">
+									<label for="email" class="sr-only">Name</label>
+									<input class="form-control" type="text" id="name" placeholder="Name" />
+								</div>
+								<div class="form-group">
+									<label for="email" class="sr-only">Email</label>
+									<input class="form-control" type="email" id="email" placeholder="Email" />
+								</div>
+								<div class="form-group">
+									<label class="checkbox-inline">
+									<input type="checkbox" /> Option A
+									</label>
+									<label class="checkbox-inline">
+									<input type="checkbox" /> Option B
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="radio-inline">
+									<input type="radio" name="gender" /> Male
+									</label>
+									<label class="radio-inline">
+									<input type="radio" name="gender" /> Female
+									</label>
+									<label class="radio-inline">
+									<input type="radio" name="gender" /> Other
+									</label>
+								</div>
+								<input type="submit" value="Send" class="btn btn-primary" />
+							</form>
+						</div>
+						<div class="panel-footer">
+							<a href="#" data-toggle="tooltip" data-placement="top" title="Please fill out your Name, Email, Option, and Gender">Hover for tooltip...</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<p class="panel-title">Modals</p>
+						</div>
+						<div class="panel-body">
+							<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.</p>
+						</div>
+						<div class="panel-footer">
+							<a href="#" data-toggle="modal" data-target="#dialog">Open modal...</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<p class="panel-title">Panel 3</p>
+						</div>
+						<div class="panel-body">
+							<p>A panel in bootstrap is a bordered box with some padding around its content.</p>
+						</div>
+						<div class="panel-footer">
+							<a href="#">More info...</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-3">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<p class="panel-title">Panel 4</p>
+						</div>
+						<div class="panel-body">
+							<p>Panels are created with the .panel class, and content inside the panel has a .panel-body class.</p>
+						</div>
+						<div class="panel-footer">
+							<a href="#">More info...</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+		<script>
+			$(function(){
+				$('.carousel').carousel({
+					interval: 6000,
+					pause: true,
+					wrap: true,
+					keyboard: true
+					});
+				});
+		</script>
+		<script>
+			$("[data-toggle=popover]")
+			.popover({html:true})
+
+		</script>
+		<script>
+		$('body')
+  .on('mousedown', '.popover', function(e) {
+    e.preventDefault()
+  });
+});
+</script>
+		</body>
+		</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Bootstrap Task 5</title>
+		<!-- CSS refs -->
+		<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+		<link rel="stylesheet" href="webfontkit/font.css">
+		<!-- script refs -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<!-- internal stylesheet -->
+		<style>
+			body {
+			margin-top: 90px;
+			font-family: '', Arial, sans-serif;
+			}
+			.container,
+			.container-fluid {
+			margin: 0 auto;
+			height: auto;
+			}
+			.navbar {
+			padding: 5px;
+			padding-right: 15px;
+			padding-left: 15px;
+			}
+			#carousel {
+			padding-bottom: 30px;
+			}
+			.carousel-caption {
+			max-width: 100%;
+			width:100%;
+			background-color: rgba(0, 0, 0, 0.65);
+			padding-top: 0px;
+			padding-bottom: 40px;
+			left: 0;
+			text-align:center;
+			text-color:white;
+			}
+			.jumbotron {
+			padding-top: 80px;
+			}
+			@media (max-width: 996px;) {
+			.navbar-header {
+			float: none;
+			}
+			.navbar-left,.navbar-right {
+			float: none !important;
+			}
+			.navbar-toggle {
+			display: block;
+			}
+			.navbar-collapse {
+			border-top: 1px solid transparent;
+			box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+			}
+			.navbar-fixed-top {
+			top: 0;
+			border-width: 0 0 1px;
+			}
+			.navbar-collapse.collapse {
+			display: none!important;
+			}
+			.navbar-nav {
+			float: none!important;
+			margin-top: 7.5px;
+			}
+			.navbar-nav>li {
+			float: none;
+			}
+			.navbar-nav>li>a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			}
+			.collapse.in{
+			display:block !important;
+			}
+			}
+			img{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			}
+			}
+			.navbar-brand {
+			margin: 0px;
+			padding: 0px;
+			}
+			.popover{
+			width: 200%;
+			border-radius: 0;
+			box-shadow: 2px 6px 10px rgba(0, 0, 0, .01);
+			}
+		</style>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="index.html" class="navbar-brand"><img src="../img/logo.png" alt="XHI"></a>
+					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" role="button" class="btn popovers" data-toggle="popover" data-trigger="manual"
+							data-placement="bottom" title="" data-content="<a href='../music/lost-words.html'>Lost Words</a>">
+							+ Music</a>
+						</li>
+						<li><a href="#">Browse</a></li>
+						<li><a href="#">Ordering</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</head>
+	<body>
+		<div class="container">
+		</div>
+		<script>
+			$(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+			});
+		</script>
+		<script>
+			$(function(){
+				$('.carousel').carousel({
+					interval: 6000,
+					pause: true,
+					wrap: true,
+					keyboard: true
+					});
+				});
+		</script>
+		<script>
+			$(function() {
+			$('[data-toggle="popover"]').popover({html:true})
+			});
+
+			$('body')
+			.on('mousedown', '.popover', function(e) {
+			  console.log("clicked inside popover")
+			  e.preventDefault()
+			});
+		</script>
+		<script>
+			$('[data-trigger="manual"]').click(function() {
+			  $(this).popover('toggle');
+			}).blur(function() {
+			  $(this).popover('hide');
+			});
+		</script>
+	</body>
+</html>
