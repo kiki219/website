@@ -4,24 +4,32 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>XHI | About</title>
+		<title>About &mdash; XHI</title>
 		<!-- CSS refs -->
 		<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
-		<link rel="stylesheet" href="webfontkit/font.css">
 		<!-- script refs -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<!-- internal stylesheet -->
 		<style>
+			@import url('https://fonts.googleapis.com/css?family=Comfortaa|Roboto');
 			#main {
-				margin-top: 90px;
+			margin-top: 90px;
 			}
 			.nav-btn > a{
-				padding: 0;
+			padding: 0;
 			}
 			body {
-				font-family: '', Arial, sans-serif;
-				background-color: gray;
+			font-family: 'Comfortaa', sans-serif;
+			color: white;
+			font-size: 14pt;
+			background-color: black;
+			background-image: url(img/bg3.jpg);
+			background-size: cover;
+			background-repeat: repeat-y;
+			background-position: center;
+			height: 768px;
+			padding: 0;
 			}
 			.container,
 			.container-fluid {
@@ -29,260 +37,81 @@
 			height: auto;
 			}
 			.navbar {
-			padding-top: 0px;
-			padding-right: 15px;
-			padding-left: 15px;
-			padding-bottom: 1px;
-			background-color: blue;
+			padding: 40px;
+			padding-left: 40px;
+			padding-right: 40px;
+			background-color: transparent;
 			}
-
-			img{
-			margin: 0 auto;
-			padding: 0;
-			max-height: 100%;
-			max-width: 100%;
-			position: relative;
+			.navbar-header {
+			padding-bottom: 0;
 			}
 
 			.navbar-brand {
-
-			margin: 0 auto;
-    	margin-left: 10px !important;  /* 50% of your logo width */
-    	display: block;
+			font-family: 'Comfortaa', sans-serif;
+			position:relative;
+			padding: 0;
+			padding-top: 10px;
+			padding-left: 40px;
+			font-size:2.5em;
 			}
-
-			.popover {
-			width: 200%;
-			border-radius: 0;
-			box-shadow: 2px 6px 10px rgba(0, 0, 0, .01);
+			nav a {
+			text-transform: uppercase;
+			color: white;
+			text-decoration: none;
 			}
-			/* Dropdown menu background color*/
-			.navbar-nav > li > .dropdown-menu {
-				background-color: white;
-				border-radius: 0;
-				position:absolute;
-				height: auto;
-				border-color: transparent;
+			nav a:hover {
+			color: white;
 			}
-			/* Dropdown menu font color*/
-			.navbar-nav > li > .dropdown-menu a{
-				color: black;
+			.nav-btn, .nav-btn:hover {
+			text-decoration: none;
+			position: relative;
 			}
-			/* Dropdown menu background color*/
-			.dropdown-item:active, .dropdown-item:hover {
-				background-color: white !important;
+			.nav-btn:after {
+			content: '';
+			position: absolute;
+			bottom: 5px;
+			left:0;
+			right:0;
+			height: 1px;
+			background: white;
+			opacity: 0;
+			transition: 0.2s all ease-in-out;
 			}
-
-			ul {
-	  list-style-type: none;
-	}
-
-	a {
-	  position: relative;
-	  color: #000;
-	  text-decoration: none;
-	}
-
-	a:visited {
-	  color: #000;
-	  text-decoration: none;
-	}
-
-	a:hover {
-	  color: #000;
-	  text-decoration: none;
-	}
-
-	a:before {
-	  content: "";
-	  position: absolute;
-	  width: 50%;
-	  height: 2px;
-	  bottom: -0.5px;
-	  left: 2;
-	  background-color: #000;
-	  visibility: hidden;
-	  -webkit-transform: scaleX(0);
-	  transform: scaleX(0);
-	  -webkit-transition: all 0.1s ease-in-out 0s;
-	  transition: all 0.1s ease-in-out 0s;
-	}
-
-	li.active a:before,
-	a:hover:before {
-	  visibility: visible;
-	  -webkit-transform: scaleX(1);
-	  transform: scaleX(1);
-	}
-</style>
-
+			.nav-btn:hover:after {
+			opacity: 1;
+			}
+			}
+		</style>
 	</head>
-
-	<body> <!-- classes not discussed in lessons:  -->
-
+	<body>
+		<!-- classes not discussed in lessons:  -->
 		<nav class="navbar navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="index.html" class="navbar-brand"><img src="img/logo.png" alt="XHI"></a>
+					<a href="index.html" class="navbar-brand">XHI</a>
 					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
 					</button>
 				</div>
-				<div class="collapse navbar-collapse" id="headerNav">
+				<div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a class="nav-btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-							aria-expanded="false" style="background-color:transparent;">Music
-						<span class="caret"></span></a>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="background-color:none;">
-    					<li><a class="dropdown-item" href="#">Lost Words</a></li>
-    					<li><a class="dropdown-item" href="#">Vagrant</a></li>
-    					<li><a class="dropdown-item" href="#">Coda</a></li>
-							<li><a class="dropdown-item" href="#">Singles</a></li>
-  						</ul>
-						</li>
-
-
-					<li><a class="nav-btn" href="blog.html" role="button" style="background-color:transparent;">Blog</a></li>
-					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
-</ul>
+						<li><a class="nav-btn" href="music.html" role="button" style="background-color:transparent;">Music</a></li>
+						<li><a class="nav-btn" href="blog.html" role="button" style="background-color:transparent;">Blog</a></li>
+						<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
+					</ul>
 				</div>
-
 			</div>
 		</nav>
-
 		<div class="container" id="main">
-			<!--- ACCORDION --->
-			<div class="panel-group" id="accordion">
-				<div class="panel panel-success">
-					<div class="panel-heading">
-						<h3 class="panel-title" data-target="#panel-1" data-toggle="collapse" data-parent="#accordion">Accordion 1</h3>
-					</div>
-					<div class="panel-collapse collapse" id="panel-1">
-						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
-					</div>
-				</div>
-				<div class="panel panel-warning">
-					<div class="panel-heading">
-						<h3 class="panel-title" data-target="#panel-2" data-toggle="collapse" data-parent="#accordion">Accordion 2</h3>
-					</div>
-					<div class="panel-collapse collapse" id="panel-2">
-						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
-					</div>
-				</div>
-				<div class="panel panel-danger">
-					<div class="panel-heading">
-						<h3 class="panel-title" data-target="#panel-3" data-toggle="collapse" data-parent="#accordion">Accordion 3</h3>
-					</div>
-					<div class="panel-collapse collapse" id="panel-3">
-						<div class="panel-body">Accordions are useful when you want to toggle between hiding and showing large amount of content.</div>
-					</div>
-				</div>
-			</div>
-			<!--- END ACCORDION --->
-			<!--- MODAL POPUP --->
-			<div class="modal" id="dialog">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
-							<button class="close" type="button" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
-							<h2 class="modal-title">This is a modal popup!</h2>
-						</div>
-						<div class="modal-body">
-							<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page. Click outside of this box or the 'X' to dismiss.</p>
-						</div>
-					</div>
-					<!-- end .modal-content -->
-				</div>
-				<!-- end .modal-dialog -->
-			</div>
-			<!-- end .modal -->
-			<!--- END MODAL --->
-			<div class="row">
-				<div class="col-xs-6 col-sm-3">
-					<div class="panel panel-primary">
-						<div class="panel-heading">
-							<p class="panel-title">Forms</p>
-						</div>
-						<div class="panel-body">
-							<form>
-								<div class="form-group">
-									<label for="email" class="sr-only">Name</label>
-									<input class="form-control" type="text" id="name" placeholder="Name" />
-								</div>
-								<div class="form-group">
-									<label for="email" class="sr-only">Email</label>
-									<input class="form-control" type="email" id="email" placeholder="Email" />
-								</div>
-								<div class="form-group">
-									<label class="checkbox-inline">
-									<input type="checkbox" /> Option A
-									</label>
-									<label class="checkbox-inline">
-									<input type="checkbox" /> Option B
-									</label>
-								</div>
-								<div class="form-group">
-									<label class="radio-inline">
-									<input type="radio" name="gender" /> Male
-									</label>
-									<label class="radio-inline">
-									<input type="radio" name="gender" /> Female
-									</label>
-									<label class="radio-inline">
-									<input type="radio" name="gender" /> Other
-									</label>
-								</div>
-								<input type="submit" value="Send" class="btn btn-primary" />
-							</form>
-						</div>
-						<div class="panel-footer">
-							<a href="#" data-toggle="tooltip" data-placement="top" title="Please fill out your Name, Email, Option, and Gender">Hover for tooltip...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-					<div class="panel panel-danger">
-						<div class="panel-heading">
-							<p class="panel-title">Modals</p>
-						</div>
-						<div class="panel-body">
-							<p>The Modal plugin is a dialog box/popup window that is displayed on top of the current page.</p>
-						</div>
-						<div class="panel-footer">
-							<a href="#" data-toggle="modal" data-target="#dialog">Open modal...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-					<div class="panel panel-warning">
-						<div class="panel-heading">
-							<p class="panel-title">Panel 3</p>
-						</div>
-						<div class="panel-body">
-							<p>A panel in bootstrap is a bordered box with some padding around its content.</p>
-						</div>
-						<div class="panel-footer">
-							<a href="#">More info...</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<p class="panel-title">Panel 4</p>
-						</div>
-						<div class="panel-body">
-							<p>Panels are created with the .panel class, and content inside the panel has a .panel-body class.</p>
-						</div>
-						<div class="panel-footer">
-							<a href="#">More info...</a>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
+		<script>
+			$(document).ready(function () {
 
-		</body>
-		</html>
+			    $('[data-toggle="dropdown"]').dropdown({
+			        delay: {
+			            "show": 100
+			        }
+			    });
+		</script>
+	</body>
+</html>
