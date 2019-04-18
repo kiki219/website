@@ -19,6 +19,13 @@
 			.nav-btn > a{
 			padding: 0;
 			}
+			a, a:active, a:visited {
+			color: black;
+			}
+			html, body {
+				-webkit-font-smoothing:antialiased;
+				-webkit-text-size-adjust:100%;
+			}
 			body {
 			font-family: 'Comfortaa', sans-serif;
 			color: white;
@@ -35,6 +42,8 @@
 			.container-fluid {
 			margin: 0 auto;
 			height: auto;
+			position:relative;
+
 			}
 			.navbar {
 			padding: 40px;
@@ -89,6 +98,7 @@
 			}
 		</style>
 	</head>
+
 	<body>
 		<!-- classes not discussed in lessons:  -->
 		<nav class="navbar navbar-fixed-top">
@@ -109,15 +119,8 @@
 			</div>
 		</nav>
 		<div class="container" id="main">
-			<div class="col-12">
-
-			<iframe id="lostwords" style="border: 0; width: 300px; height: 604px;" src="https://bandcamp.com/EmbeddedPlayer/album=3575719846/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="http://xhimusic.bandcamp.com/album/lost-words">LOST WORDS by XHI</a></iframe>
-			<iframe id="vagrant" style="border: 0; width: 300px; height: 538px;" src="https://bandcamp.com/EmbeddedPlayer/album=3925818944/size=large/bgcol=ffffff/linkcol=de270f/transparent=true/" seamless><a href="http://xhimusic.bandcamp.com/album/fl-idd-xandra-vagrant-ep">XHI &amp; Xandra - Vagrant EP by XHI</a></iframe>
-			<iframe id="coda" style="border: 0; width: 300px; height: 571px;" src="https://bandcamp.com/EmbeddedPlayer/album=2241781404/size=large/bgcol=ffffff/linkcol=e99708/transparent=true/" seamless><a href="http://xhimusic.bandcamp.com/album/coda">CODA by XHI</a></iframe>
-
 			</div>
 
-		</div>
 		<script>
 			$(document).ready(function () {
 
