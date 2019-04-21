@@ -9,17 +9,17 @@
 	<!-- CSS refs -->
 	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="icon" href="../icon/favicon.ico" type="image/x-icon" />
 	<!-- script refs -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 	<!-- internal stylesheet -->
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Comfortaa');
 		@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 		#main {
-			margin-top: 140px;
+			margin-top: 30px;
 		}
 
 		.nav-btn>a {
@@ -36,8 +36,9 @@
 
 		html,
 		body {
-			-webkit-font-smoothing: auto;
+			-webkit-font-smoothing: antialiased;
 			-webkit-text-size-adjust: 100%;
+			height: 100%;
 		}
 
 		body {
@@ -45,12 +46,13 @@
 			color: white;
 			font-size: 14pt;
 			background-color: black;
-			background-image: url(../img/bg1.jpg);
+			background-image: url(../img/bg2.jpg);
 			background-size: cover;
-			background-repeat: repeat-y;
+			background-repeat: no-repeat;
 			background-position: center;
-			height: 768px;
-			padding: 0;
+			height: auto;
+			padding-bottom: 0;
+			margin-bottom: 0 auto;
 		}
 
 		.container,
@@ -64,6 +66,7 @@
 			padding-left: 40px;
 			padding-right: 40px;
 			background-color: transparent;
+			padding-bottom: 0px;
 		}
 
 		.navbar-header {
@@ -100,11 +103,10 @@
 		}
 
 		.dropdown-menu {
-			background-color: rgba(0, 0, 0, .8);
+			background-color: rgba(0, 0, 0, .3);
 			border-color: transparent;
 			box-shadow: none;
 			border-radius: 5px;
-
 		}
 
 		.dropdown-menu li>a:hover {
@@ -140,12 +142,32 @@
 				overflow: hidden;
 				background-color: white;
 			}
+
+			p {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				padding: 30px;
+				margin-top: -35px;
+				padding-top: 0px;
+				font-weight: normal;
+				font-size: 14pt;
+			}
+
+			h1 {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				text-transform: uppercase;
+				vertical-align: top;
+				display: inline-block;
+				padding: 30px;
+				font-weight: bold;
+				font-size: 30pt;
+			}
 		}
 
 		@media screen and (max-width: 768px) {
 			.nav-btn:after {
 				background: transparent;
-
 			}
 
 			.dropdown-menu .line {
@@ -153,32 +175,34 @@
 			}
 
 			.navbar-collapse {
-				background-color: rgba(0, 0, 0, .8);
+				background-color: transparent;
 			}
 
 			.dropdown-menu li>a:hover {
 				background-color: rgba(255, 255, 255, 0.3);
 				color: white;
 			}
-		}
 
-		h1 {
-			font-family: 'Montserrat', sans-serif;
-			text-align: left;
-			text-transform: uppercase;
-			vertical-align: top;
-			display: inline-block;
-			padding: 30px;
-			font-weight: bold;
-		}
+			p {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				padding: 30px;
+				margin-top: -35px;
+				padding-top: 0px;
+				font-weight: normal;
+				font-size: 12pt;
+			}
 
-		p {
-			font-family: 'Montserrat', sans-serif;
-			text-align: left;
-			padding: 30px;
-			margin-top: -35px;
-			padding-top: 0px;
-			font-weight: normal;
+			h1 {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				text-transform: uppercase;
+				vertical-align: top;
+				display: inline-block;
+				padding: 30px;
+				font-weight: bold;
+				font-size: 24pt;
+			}
 		}
 
 		.music {
@@ -186,7 +210,8 @@
 			border-radius: 5px;
 			border-color: rgba(0, 0, 0, 0.3);
 			border-width: 3px;
-			margin: 0;
+			margin: 0 auto;
+			padding-top: 0px;
 			padding-left: 20px;
 			padding-right: 20px;
 			padding-bottom: 15px;
@@ -197,15 +222,25 @@
 			color: #cccccc;
 		}
 
-		p > a > img{
+		p>a>img {
 			vertical-align: middle;
+		}
+		#footer, #footer p{
+			margin-bottom: 8px;
+			margin-top: 24px;
+			padding: 0px;
+			float: left;
+			text-align: center;
+			width: 100%;
+			font-size: 10pt;
+			color: rgba(255,255,255,0.3);
 		}
 	</style>
 </head>
 
 <body>
 	<!-- classes not discussed in lessons:  -->
-	<nav class="navbar navbar-fixed-top">
+	<nav class="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="../index.html" class="navbar-brand">XHI</a>
@@ -222,7 +257,7 @@
 							<li><a href="lostwords.html">Lost Words</a></li>
 							<li><a href="vagrant.html">Vagrant</a></li>
 							<li><a href="coda.html">Coda</a></li>
-							<li><a href="https://soundcloud.com/xhi-music/sets/singles" target="_blank">Singles</a></li>
+							<li><a href="singles.html" target="_blank">Singles</a></li>
 						</ul>
 					</li>
 					<li><a class="nav-btn" href="../about.html" role="button" style="background-color:transparent;">About</a></li>
@@ -230,26 +265,28 @@
 			</div>
 		</div>
 	</nav>
-
 	<div class="container" id="main">
-
 		<div class="music col-sm-12">
 			<h1>Lost Words</h1>
 			<p>by XHI</p>
 			<br />
-			<p>Stream/Purchase &mdash;&nbsp;
-				<a href="https://itunes.apple.com/ca/album/lost-words-ep/1425532174?app=itunes" target="_blank"><img height="32" width="27" src="../icon/itunes.svg" alt="iTunes"/></a>&nbsp;
-				<a href="https://xhimusic.bandcamp.com/album/lost-words" target="_blank"><img height="32" width="32" src="../icon/bandcamp.svg" alt="Bandcamp"/></a>&nbsp;
-				<a href="https://open.spotify.com/album/0dJEXrS1yQTdaIwmSGQE8Q?si=7S2iUobVRmifhu61ldVDRQ" target="_blank"><img height="32" width="32" src="../icon/spotify.svg" alt="Spotify"/></a>&nbsp;
-				<a href="https://itunes.apple.com/ca/album/lost-words-ep/1425532174?uo=4&ls=1&app=music&at=11lEW&ct=1nlvto" target="_blank"><img height="32" width="32" src="../icon/applemusic.svg" alt="Apple Music"/></a>&nbsp;
-							</p>
-
-			<iframe style="display: inline-block; margin: 0 auto;" width="100%" height="400" scrolling="no" frameborder="no" allow="autoplay"
-				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/580221837&color=%23212121&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false"></iframe>
-
+			<p>
+				<a href="https://itunes.apple.com/ca/album/lost-words-ep/1425532174?app=itunes" target="_blank"><img height="32" width="27" src="../icon/itunes.svg" alt="iTunes" /></a>&nbsp;
+				<a href="https://xhimusic.bandcamp.com/album/lost-words" target="_blank"><img height="32" width="32" src="../icon/bandcamp.svg" alt="Bandcamp" /></a>&nbsp;
+				<a href="https://open.spotify.com/album/0dJEXrS1yQTdaIwmSGQE8Q?si=7S2iUobVRmifhu61ldVDRQ" target="_blank"><img height="32" width="32" src="../icon/spotify.svg" alt="Spotify" /></a>&nbsp;
+				<a href="https://itunes.apple.com/ca/album/lost-words-ep/1425532174?uo=4&ls=1&app=music&at=11lEW&ct=1nlvto" target="_blank"><img height="32" width="32" src="../icon/applemusic.svg" alt="Apple Music" /></a>&nbsp;
+			</p>
+			<iframe style="display: inline-block; margin: 0 auto;" width="100%" height="430" scrolling="no" frameborder="no" allow="autoplay"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/580221837&color=%23212121&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
 		</div>
 
+		<div id="footer">
+			<p>&copy; 2018 XHI</p>
+		</div>
 	</div>
+
+
+
 </body>
 
 </html>
