@@ -1,33 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>XHI</title>
-		<!-- CSS refs -->
-		<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
-		<!-- script refs -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-		<!-- internal stylesheet -->
-		<style>
-			@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-			@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
-			#main {
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>XHI</title>
+	<!-- CSS refs -->
+	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+	<!-- script refs -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<!-- internal stylesheet -->
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+		@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+
+		#main {
 			margin-top: 90px;
-			}
-			.nav-btn > a{
+		}
+
+		.nav-btn>a {
 			padding: 0;
-			}
-			a, a:active, a:visited, a:focus {
+		}
+
+		a,
+		a:active,
+		a:visited,
+		a:focus {
 			color: black;
-			}
-			html, body {
+		}
+
+		html,
+		body {
 			-webkit-font-smoothing: auto;
 			-webkit-text-size-adjust: 100%;
-			}
-			body {
+		}
+
+		body {
 			font-family: 'Comfortaa', sans-serif;
 			color: black;
 			font-size: 14pt;
@@ -38,62 +48,72 @@
 			background-position: center;
 			height: 768px;
 			padding: 0;
-			}
-			.container,
-			.container-fluid {
+		}
+
+		.container,
+		.container-fluid {
 			margin: 0 auto;
 			height: auto;
-			}
-			.navbar {
+		}
+
+		.navbar {
 			padding: 40px;
 			padding-left: 40px;
 			padding-right: 40px;
 			background-color: transparent;
-			}
-			.navbar-header {
+		}
+
+		.navbar-header {
 			padding-bottom: 0;
-			}
-			.navbar-brand {
+		}
+
+		.navbar-brand {
 			font-family: 'Comfortaa', sans-serif;
-			position:relative;
+			position: relative;
 			padding: 0;
 			padding-top: 10px;
 			padding-left: 40px;
-			font-size:2.5em;
-			letter-spacing: 12px;
-			}
-			nav a {
+			font-size: 2.5em;
+		}
+
+		nav a {
 			text-transform: uppercase;
 			color: black;
 			text-decoration: none;
-			}
-			nav a:hover  {
+		}
+
+		nav a:hover {
 			color: black;
-			}
-			.nav-btn, .nav-btn:hover {
+		}
+
+		.nav-btn,
+		.nav-btn:hover {
 			text-decoration: none;
 			position: relative;
-			}
+		}
 
-			.nav-btn:hover:after {
+		.nav-btn:hover:after {
 			opacity: 1;
-			}
-			.dropdown-menu {
-				background-color:transparent;
-				border-color: transparent;
-				box-shadow: none;
+		}
 
-			}
-			.dropdown-menu li > a:hover{
-				background-color: rgba(255,255,255,0.4);
-				color: black;
-			}
-			.dropdown-menu li > a{
-				color: black;
-			}
+		.dropdown-menu {
+			background-color: transparent;
+			border-color: transparent;
+			box-shadow: none;
 
-			@media screen and (min-width: 769px){
-				.nav-btn:after {
+		}
+
+		.dropdown-menu li>a:hover {
+			background-color: rgba(255, 255, 255, 0.4);
+			color: black;
+		}
+
+		.dropdown-menu li>a {
+			color: black;
+		}
+
+		@media screen and (min-width: 769px) {
+			.nav-btn:after {
 				content: '';
 				position: absolute;
 				bottom: 0px;
@@ -105,7 +125,8 @@
 				opacity: 0;
 				transition: 0.2s all ease-in-out;
 				margin-bottom: 0px;
-				}
+			}
+
 			.dropdown-menu .line {
 				height: 2px;
 				margin-bottom: 9.5px;
@@ -116,59 +137,61 @@
 				background-color: black;
 			}
 		}
-		@media screen and (max-width: 768px){
+
+		@media screen and (max-width: 768px) {
 			.nav-btn:after {
-			background: transparent;
+				background: transparent;
 
 			}
-		.dropdown-menu .line {
-			height: 2px;
-			width: 100%;
-			margin-bottom: 9.5px;
-			margin-top: -7px;
-			margin-left: 0 auto;
-			margin-right: 0 auto;
-			overflow: hidden;
-			background-color: black;
+
+			.dropdown-menu .line {
+				height: 2px;
+				width: 100%;
+				margin-bottom: 9.5px;
+				margin-top: -7px;
+				margin-left: 0 auto;
+				margin-right: 0 auto;
+				overflow: hidden;
+				background-color: black;
+			}
 		}
-	}
+	</style>
+</head>
 
-
-		</style>
-	</head>
-	<body>
-		<!-- classes not discussed in lessons:  -->
-		<nav class="navbar navbar-fixed-top">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href="index.html" class="navbar-brand">XHI</a>
-					<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
+<body>
+	<!-- classes not discussed in lessons:  -->
+	<nav class="navbar navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">XHI</a>
+				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
-					</button>
-				</div>
-				<div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-									<li class="line"></li>
-									<li><a href="music/lostwords.html">Lost Words</a></li>
-									<li><a href="music/vagrant.html">Vagrant</a></li>
-									<li><a href="music/coda.html">Coda</a></li>
-									<li><a href="https://soundcloud.com/xhi-music/sets/singles">Singles</a></li>
-                </ul>
-            </li>
-						<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
-					</ul>
-				</div>
+				</button>
 			</div>
-		</nav>
-		<div class="container" id="main">
-
-
-
-
+			<div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li class="line"></li>
+							<li><a href="music/lostwords.html">Lost Words</a></li>
+							<li><a href="music/vagrant.html">Vagrant</a></li>
+							<li><a href="music/coda.html">Coda</a></li>
+							<li><a href="https://soundcloud.com/xhi-music/sets/singles" target="_blank">Singles</a></li>
+						</ul>
+					</li>
+					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
+				</ul>
+			</div>
 		</div>
+	</nav>
+	<div class="container" id="main">
 
-	</body>
+
+
+
+	</div>
+
+</body>
+
 </html>
