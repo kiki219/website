@@ -8,6 +8,7 @@
 	<title>XHI</title>
 	<!-- CSS refs -->
 	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
 	<!-- script refs -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,10 +16,10 @@
 	<!-- internal stylesheet -->
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-		@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+		@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 		#main {
-			margin-top: 90px;
+			margin-top: 30px;
 		}
 
 		.nav-btn>a {
@@ -29,26 +30,28 @@
 		a:active,
 		a:visited,
 		a:focus {
-			color: black;
+			color: white;
+			text-decoration: none;
 		}
 
 		html,
 		body {
-			-webkit-font-smoothing: auto;
+			-webkit-font-smoothing: antialiased;
 			-webkit-text-size-adjust: 100%;
+			height: 100%;
 		}
 
 		body {
 			font-family: 'Comfortaa', sans-serif;
-			color: black;
+			color: white;
 			font-size: 14pt;
-			background-color: white;
-			background-image: url(img/bg0.jpg);
+			background-color: black;
+			background-image: url(img/bg-promo.jpg);
 			background-size: cover;
-			background-repeat: repeat-y;
+			background-repeat: no-repeat;
 			background-position: center;
-			height: 768px;
-			padding: 0;
+			padding-bottom: 0;
+			margin-bottom: 0 auto;
 		}
 
 		.container,
@@ -62,6 +65,7 @@
 			padding-left: 40px;
 			padding-right: 40px;
 			background-color: transparent;
+			padding-bottom: 0px;
 		}
 
 		.navbar-header {
@@ -79,12 +83,12 @@
 
 		nav a {
 			text-transform: uppercase;
-			color: black;
+			color: white;
 			text-decoration: none;
 		}
 
 		nav a:hover {
-			color: black;
+			color: white;
 		}
 
 		.nav-btn,
@@ -98,19 +102,19 @@
 		}
 
 		.dropdown-menu {
-			background-color: transparent;
+			background-color: rgba(0, 0, 0, .3);
 			border-color: transparent;
 			box-shadow: none;
-
+			border-radius: 5px;
 		}
 
 		.dropdown-menu li>a:hover {
-			background-color: rgba(255, 255, 255, 0.4);
-			color: black;
+			background-color: rgba(255, 255, 255, 0.3);
+			color: white;
 		}
 
 		.dropdown-menu li>a {
-			color: black;
+			color: white;
 		}
 
 		@media screen and (min-width: 769px) {
@@ -122,7 +126,7 @@
 				right: 0px;
 				width: 110px;
 				height: 2px;
-				background: black;
+				background: white;
 				opacity: 0;
 				transition: 0.2s all ease-in-out;
 				margin-bottom: 0px;
@@ -135,33 +139,78 @@
 				margin-left: 0 auto;
 				margin-right: 0 auto;
 				overflow: hidden;
-				background-color: black;
+				background-color: white;
+			}
+
+			h1 {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				text-transform: uppercase;
+				vertical-align: top;
+				display: inline-block;
+				padding: 0;
+				font-weight: bold;
+				font-size: 54pt;
+				color: #910e16;
 			}
 		}
 
 		@media screen and (max-width: 768px) {
 			.nav-btn:after {
 				background: transparent;
-
 			}
 
 			.dropdown-menu .line {
-				height: 2px;
-				width: 100%;
-				margin-bottom: 9.5px;
-				margin-top: -7px;
-				margin-left: 0 auto;
-				margin-right: 0 auto;
-				overflow: hidden;
-				background-color: black;
+				background-color: transparent;
 			}
+
+			.navbar-collapse {
+				background-color: transparent;
+			}
+
+			.dropdown-menu li>a:hover {
+				background-color: rgba(255, 255, 255, 0.3);
+				color: white;
+			}
+
+			h1 {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				text-transform: uppercase;
+				vertical-align: top;
+				display: inline-block;
+				padding: 0;
+				font-weight: bold;
+				font-size: 32pt;
+				color: #910e16;
+			}
+		}
+
+		#promo {
+			background-color: transparent;
+			margin: 60px auto;
+			height: 500px;
+			width: 400px;
+			padding: 40px;
+		}
+
+		p>a:hover {
+			text-decoration: none;
+			color: #cccccc;
+		}
+		.label {
+			margin-left: 2px;
+			vertical-align: top;
+			font-size: 5pt;
+			background-color: transparent;
+			color: red;
 		}
 	</style>
 </head>
 
 <body>
 	<!-- classes not discussed in lessons:  -->
-	<nav class="navbar navbar-fixed-top">
+	<nav class="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a href="index.html" class="navbar-brand">XHI</a>
@@ -175,10 +224,10 @@
 						<a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="line"></li>
-							<li><a href="music/lostwords.html">Lost Words</a></li>
+							<li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
 							<li><a href="music/vagrant.html">Vagrant</a></li>
 							<li><a href="music/coda.html">Coda</a></li>
-							<li><a href="https://soundcloud.com/xhi-music/sets/singles" target="_blank">Singles</a></li>
+							<li><a href="music/singles.html">Singles</a></li>
 						</ul>
 					</li>
 					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
@@ -187,12 +236,17 @@
 		</div>
 	</nav>
 	<div class="container" id="main">
-
-
-
-
+		<div id="promo"></div>
 	</div>
+	<script>
+	var promo = document.getElementById('promo');
 
+		promo.addEventListener('click', function() {
+			window.open("https://smarturl.it/lostwords");
+
+				}, false);
+
+	</script>
 </body>
 
 </html>
