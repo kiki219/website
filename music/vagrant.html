@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>XHI</title>
+	<title>Vagrant &mdash; XHI</title>
 	<!-- CSS refs -->
 	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="../icon/favicon.ico" type="image/x-icon" />
 	<!-- script refs -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -46,10 +46,11 @@
 			color: white;
 			font-size: 14pt;
 			background-color: black;
-			background-image: url(img/bg-promo.jpg);
+			background-image: url(../img/bg4.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;
+			height: auto;
 			padding-bottom: 0;
 			margin-bottom: 0 auto;
 		}
@@ -142,16 +143,25 @@
 				background-color: white;
 			}
 
+			p {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				padding: 30px;
+				margin-top: -35px;
+				padding-top: 0px;
+				font-weight: normal;
+				font-size: 14pt;
+			}
+
 			h1 {
 				font-family: 'Montserrat', sans-serif;
 				text-align: left;
 				text-transform: uppercase;
 				vertical-align: top;
 				display: inline-block;
-				padding: 0;
+				padding: 30px;
 				font-weight: bold;
-				font-size: 54pt;
-				color: #910e16;
+				font-size: 30pt;
 			}
 		}
 
@@ -173,30 +183,59 @@
 				color: white;
 			}
 
+			p {
+				font-family: 'Montserrat', sans-serif;
+				text-align: left;
+				padding: 30px;
+				margin-top: -35px;
+				padding-top: 0px;
+				font-weight: normal;
+				font-size: 12pt;
+			}
+
 			h1 {
 				font-family: 'Montserrat', sans-serif;
 				text-align: left;
 				text-transform: uppercase;
 				vertical-align: top;
 				display: inline-block;
-				padding: 0;
+				padding: 30px;
 				font-weight: bold;
-				font-size: 32pt;
-				color: #910e16;
+				font-size: 24pt;
 			}
 		}
 
-		#promo {
-			background-color: transparent;
-			margin: 60px auto;
-			height: 500px;
-			width: 400px;
-			padding: 40px;
+		.music {
+			background-color: rgba(0, 0, 0, 0.3);
+			border-radius: 5px;
+			border-color: rgba(0, 0, 0, 0.3);
+			border-width: 3px;
+			margin: 0 auto;
+			padding-top: 0px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 15px;
 		}
 
 		p>a:hover {
 			text-decoration: none;
 			color: #cccccc;
+		}
+
+		p>a>img {
+			vertical-align: middle;
+		}
+
+		#footer,
+		#footer p {
+			margin-bottom: 8px;
+			margin-top: 24px;
+			padding: 0px;
+			float: left;
+			text-align: center;
+			width: 100%;
+			font-size: 10pt;
+			color: rgba(255, 255, 255, 0.3);
 		}
 		.label {
 			margin-left: 2px;
@@ -213,7 +252,7 @@
 	<nav class="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">XHI</a>
+				<a href="../index.html" class="navbar-brand">XHI</a>
 				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
@@ -224,29 +263,34 @@
 						<a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li class="line"></li>
-							<li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
-							<li><a href="music/vagrant.html">Vagrant</a></li>
-							<li><a href="music/coda.html">Coda</a></li>
-							<li><a href="music/singles.html">Singles</a></li>
+							<li><a href="lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
+							<li><a href="vagrant.html">Vagrant</a></li>
+							<li><a href="coda.html">Coda</a></li>
+							<li><a href="singles.html">Singles</a></li>
 						</ul>
 					</li>
-					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
+					<li><a class="nav-btn" href="../about.html" role="button" style="background-color:transparent;">About</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container" id="main">
-		<div id="promo"></div>
+		<div class="music col-sm-12">
+			<h1>Vagrant</h1>
+			<p>by XHI & Xandra</p>
+			<br />
+			<p>
+				<a href="https://itunes.apple.com/ca/album/vagrant-ep/1398502065?app=itunes" target="_blank"><img height="32" width="27" src="../icon/itunes.svg" alt="iTunes" /></a>&nbsp;
+				<a href="https://xhimusic.bandcamp.com/album/fl-idd-xandra-vagrant-ep" target="_blank"><img height="32" width="32" src="../icon/bandcamp.svg" alt="Bandcamp" /></a>&nbsp;
+				<a href="https://open.spotify.com/album/7I0Kw37cKhNfjBxPBTOVWa?si=0BMMdtDuSeCCXrJpsKaMaA" target="_blank"><img height="32" width="32" src="../icon/spotify.svg" alt="Spotify" /></a>&nbsp;
+				<a href="https://itunes.apple.com/ca/album/vagrant-ep/1398502065?app=music" target="_blank"><img height="32" width="32" src="../icon/applemusic.svg" alt="Apple Music" /></a>&nbsp;
+			</p>
+			<iframe style="display: inline-block; margin: 0 auto;" width="100%" height="380" scrolling="no" frameborder="no" allow="autoplay"
+				src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/337111841&color=%23212121&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+		</div>
+		<div id="footer">
+			<p>&copy; 2018 XHI</p>
+		</div>
 	</div>
-	<script>
-	var promo = document.getElementById('promo');
-
-		promo.addEventListener('click', function() {
-			window.open("https://smarturl.it/lostwords");
-
-				}, false);
-
-	</script>
 </body>
-
 </html>
