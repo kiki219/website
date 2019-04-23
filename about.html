@@ -244,7 +244,39 @@
 			background-color: transparent;
 			color: red;
 		}
-	</style>
+.form-control, .form-control:focus {
+	background-color: rgba(0,0,0,0.3);
+	border: none;
+	color: white;
+	width: 400px;
+}
+h4 {
+	font-family: 'Montserrat', sans-serif;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: bold;
+		padding-bottom: 10px;
+}
+#form {
+	font-family: 'Montserrat', sans-serif;
+	padding: 30px;
+}
+
+input.btn {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	border: none;
+	background-color: rgba(0,0,0,0.3);
+	color: white
+}
+input.btn:hover, input.btn:focus {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	border: none;
+	background-color: rgba(0,0,0,0.1);
+	color: white
+}
+</style>
 </head>
 
 <body>
@@ -277,15 +309,33 @@
 	<div class="container" id="main">
 		<div class="content">
 			<h1>About</h1>
-			<p><br/>Kira Chouinard is an experimental music producer from British Columbia, Canada. She has been playing around with music for over 5 years, and is currently working under the alias <b>XHI</b> (pronounced "shi"). </p>
+			<p><br/>Kira Chouinard is an experimental music producer from British Columbia, Canada. She has been working on music seriously for over 5 years, and is currently working under the alias <b>XHI</b> (pronounced "shi"). </p>
+
+		<form method="post" action="contact_handler.php" id="form">
+			<h4>Contact</h4>
+			<div class="form-group">
+					<label for="email" class="sr-only">Name</label>
+					<input class="form-control" type="text" id="name" placeholder="Name" />
 			</div>
-			<form>
-			</form>
+			<div class="form-group">
+					<label for="email" class="sr-only">Email</label>
+					<input class="form-control" type="email" id="email" placeholder="Email" />
+			</div>
+			<div class="form-group">
+
+				<textarea id="message" type="message-box" class="form-control" placeholder="Message" required="required" data-error="Please leave us a message."></textarea>
+
+			</div>
+
+    	<input type="submit" value="Send" class="btn btn-default" />
+		</form>
+		</div>
+
+
 		<div id="footer">
 			<p>&copy; 2018 XHI</p>
 		</div>
 	</div>
-
 
 
 </body>
