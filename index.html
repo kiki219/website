@@ -2,251 +2,244 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>XHI</title>
-	<!-- CSS refs -->
-	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
-	<!-- script refs -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<!-- internal stylesheet -->
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-		@import url('https://fonts.googleapis.com/css?family=Montserrat');
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XHI</title>
+    <!-- CSS refs -->
+    <link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
+    <!-- script refs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- internal stylesheet -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        #main {
+            margin-top: 30px;
+        }
 
-		#main {
-			margin-top: 30px;
-		}
+        .nav-btn>a {
+            padding: 0;
+        }
 
-		.nav-btn>a {
-			padding: 0;
-		}
+        a,
+        a:active,
+        a:visited,
+        a:focus {
+            color: white;
+            text-decoration: none;
+        }
 
-		a,
-		a:active,
-		a:visited,
-		a:focus {
-			color: white;
-			text-decoration: none;
-		}
+        html,
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+        }
 
-		html,
-		body {
-			-webkit-font-smoothing: antialiased;
-			-webkit-text-size-adjust: 100%;
-			height: 100%;
-		}
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            color: white;
+            font-size: 14pt;
+            background-color: black;
+            background-image: url(img/bg-promo.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-bottom: 0;
+            margin-bottom: 0 auto;
+        }
 
-		body {
-			font-family: 'Comfortaa', sans-serif;
-			color: white;
-			font-size: 14pt;
-			background-color: black;
-			background-image: url(img/bg-promo.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			padding-bottom: 0;
-			margin-bottom: 0 auto;
-		}
+        .container,
+        .container-fluid {
+            margin: 0 auto;
+            height: auto;
+        }
 
-		.container,
-		.container-fluid {
-			margin: 0 auto;
-			height: auto;
-		}
+        .navbar {
+            padding: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: transparent;
+            padding-bottom: 0px;
+        }
 
-		.navbar {
-			padding: 40px;
-			padding-left: 40px;
-			padding-right: 40px;
-			background-color: transparent;
-			padding-bottom: 0px;
-		}
+        .navbar-header {
+            padding-bottom: 0;
+        }
 
-		.navbar-header {
-			padding-bottom: 0;
-		}
+        .navbar-brand {
+            font-family: 'Comfortaa', sans-serif;
+            position: relative;
+            padding: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 2.5em;
+        }
 
-		.navbar-brand {
-			font-family: 'Comfortaa', sans-serif;
-			position: relative;
-			padding: 0;
-			padding-top: 10px;
-			padding-left: 40px;
-			font-size: 2.5em;
-		}
+        nav a {
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+        }
 
-		nav a {
-			text-transform: uppercase;
-			color: white;
-			text-decoration: none;
-		}
+        nav a:hover {
+            color: white;
+        }
 
-		nav a:hover {
-			color: white;
-		}
+        .nav-btn,
+        .nav-btn:hover {
+            text-decoration: none;
+            position: relative;
+        }
 
-		.nav-btn,
-		.nav-btn:hover {
-			text-decoration: none;
-			position: relative;
-		}
+        .nav-btn:hover:after {
+            opacity: 1;
+        }
 
-		.nav-btn:hover:after {
-			opacity: 1;
-		}
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, .3);
+            border-color: transparent;
+            box-shadow: none;
+            border-radius: 5px;
+        }
 
-		.dropdown-menu {
-			background-color: rgba(0, 0, 0, .3);
-			border-color: transparent;
-			box-shadow: none;
-			border-radius: 5px;
-		}
+        .dropdown-menu li>a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
 
-		.dropdown-menu li>a:hover {
-			background-color: rgba(255, 255, 255, 0.3);
-			color: white;
-		}
+        .dropdown-menu li>a {
+            color: white;
+        }
 
-		.dropdown-menu li>a {
-			color: white;
-		}
+        @media screen and (min-width: 769px) {
+            .nav-btn:after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                width: 110px;
+                height: 2px;
+                background: white;
+                opacity: 0;
+                transition: 0.2s all ease-in-out;
+                margin-bottom: 0px;
+            }
+            .dropdown-menu .line {
+                height: 2px;
+                margin-bottom: 9.5px;
+                margin-top: -8px;
+                margin-left: 0 auto;
+                margin-right: 0 auto;
+                overflow: hidden;
+                background-color: white;
+            }
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                text-transform: uppercase;
+                vertical-align: top;
+                display: inline-block;
+                padding: 0;
+                font-weight: bold;
+                font-size: 54pt;
+                color: #910e16;
+            }
+        }
 
-		@media screen and (min-width: 769px) {
-			.nav-btn:after {
-				content: '';
-				position: absolute;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				width: 110px;
-				height: 2px;
-				background: white;
-				opacity: 0;
-				transition: 0.2s all ease-in-out;
-				margin-bottom: 0px;
-			}
+        @media screen and (max-width: 768px) {
+            .nav-btn:after {
+                background: transparent;
+            }
+            .dropdown-menu .line {
+                background-color: transparent;
+            }
+            .navbar-collapse {
+                background-color: transparent;
+            }
+            .dropdown-menu li>a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                color: white;
+            }
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                text-transform: uppercase;
+                vertical-align: top;
+                display: inline-block;
+                padding: 0;
+                font-weight: bold;
+                font-size: 32pt;
+                color: #910e16;
+            }
+        }
 
-			.dropdown-menu .line {
-				height: 2px;
-				margin-bottom: 9.5px;
-				margin-top: -8px;
-				margin-left: 0 auto;
-				margin-right: 0 auto;
-				overflow: hidden;
-				background-color: white;
-			}
+        #promo {
+            background-color: transparent;
+            margin: 60px auto;
+            height: 500px;
+            width: 400px;
+            padding: 40px;
+        }
 
-			h1 {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				text-transform: uppercase;
-				vertical-align: top;
-				display: inline-block;
-				padding: 0;
-				font-weight: bold;
-				font-size: 54pt;
-				color: #910e16;
-			}
-		}
+        p>a:hover {
+            text-decoration: none;
+            color: #cccccc;
+        }
 
-		@media screen and (max-width: 768px) {
-			.nav-btn:after {
-				background: transparent;
-			}
-
-			.dropdown-menu .line {
-				background-color: transparent;
-			}
-
-			.navbar-collapse {
-				background-color: transparent;
-			}
-
-			.dropdown-menu li>a:hover {
-				background-color: rgba(255, 255, 255, 0.3);
-				color: white;
-			}
-
-			h1 {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				text-transform: uppercase;
-				vertical-align: top;
-				display: inline-block;
-				padding: 0;
-				font-weight: bold;
-				font-size: 32pt;
-				color: #910e16;
-			}
-		}
-
-		#promo {
-			background-color: transparent;
-			margin: 60px auto;
-			height: 500px;
-			width: 400px;
-			padding: 40px;
-		}
-
-		p>a:hover {
-			text-decoration: none;
-			color: #cccccc;
-		}
-		.label {
-			margin-left: 2px;
-			vertical-align: top;
-			font-size: 5pt;
-			background-color: transparent;
-			color: red;
-		}
-	</style>
+        .label {
+            margin-left: 2px;
+            vertical-align: top;
+            font-size: 5pt;
+            background-color: transparent;
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- classes not discussed in lessons:  -->
-	<nav class="navbar">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">XHI</a>
-				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li class="line"></li>
-							<li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
-							<li><a href="music/vagrant.html">Vagrant</a></li>
-							<li><a href="music/coda.html">Coda</a></li>
-							<li><a href="music/singles.html">Singles</a></li>
-						</ul>
-					</li>
-					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container" id="main">
-		<div id="promo"></div>
-	</div>
-	<script>
-	var promo = document.getElementById('promo');
+    <!-- classes not discussed in lessons:  -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">XHI</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="line"></li>
+                            <li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
+                            <li><a href="music/vagrant.html">Vagrant</a></li>
+                            <li><a href="music/coda.html">Coda</a></li>
+                            <li><a href="music/singles.html">Singles</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="main">
+        <div id="promo"></div>
+    </div>
+    <script>
+        var promo = document.getElementById('promo');
 
-		promo.addEventListener('click', function() {
-			window.open("https://smarturl.it/lostwords");
+        promo.addEventListener('click', function() {
+            window.open("https://smarturl.it/lostwords");
 
-				}, false);
-
-	</script>
+        }, false);
+    </script>
 </body>
 
 </html>

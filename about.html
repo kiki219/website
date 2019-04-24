@@ -2,338 +2,329 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>About &mdash; XHI</title>
-	<!-- CSS refs -->
-	<link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
-	<!-- script refs -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<!-- internal stylesheet -->
-	<style>
-		@import url('https://fonts.googleapis.com/css?family=Comfortaa');
-		@import url('https://fonts.googleapis.com/css?family=Montserrat');
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About &mdash; XHI</title>
+    <!-- CSS refs -->
+    <link rel="stylesheet" href="https://bootswatch.com/3/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="icon" href="icon/favicon.ico" type="image/x-icon" />
+    <!-- script refs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- internal stylesheet -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        #main {
+            margin-top: 30px;
+        }
 
-		#main {
-			margin-top: 30px;
-		}
+        .nav-btn>a {
+            padding: 0;
+        }
 
-		.nav-btn>a {
-			padding: 0;
-		}
+        a,
+        a:active,
+        a:visited,
+        a:focus {
+            color: white;
+            text-decoration: none;
+        }
 
-		a,
-		a:active,
-		a:visited,
-		a:focus {
-			color: white;
-			text-decoration: none;
-		}
+        html,
+        body {
+            -webkit-font-smoothing: antialiased;
+            -webkit-text-size-adjust: 100%;
+            height: 100%;
+        }
 
-		html,
-		body {
-			-webkit-font-smoothing: antialiased;
-			-webkit-text-size-adjust: 100%;
-			height: 100%;
-		}
+        body {
+            font-family: 'Comfortaa', sans-serif;
+            color: white;
+            font-size: 14pt;
+            background-color: black;
+            background-image: url(img/bg3.jpg);
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-bottom: 0;
+            margin-bottom: 0 auto;
+        }
 
-		body {
-			font-family: 'Comfortaa', sans-serif;
-			color: white;
-			font-size: 14pt;
-			background-color: black;
-			background-image: url(img/bg3.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center;
-			height: auto;
-			padding-bottom: 0;
-			margin-bottom: 0 auto;
-		}
+        .container,
+        .container-fluid {
+            margin: 0 auto;
+        }
 
-		.container,
-		.container-fluid {
-			margin: 0 auto;
-			height: auto;
-		}
+        .navbar {
+            padding: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            background-color: transparent;
+            padding-bottom: 0px;
+        }
 
-		.navbar {
-			padding: 40px;
-			padding-left: 40px;
-			padding-right: 40px;
-			background-color: transparent;
-			padding-bottom: 0px;
-		}
+        .navbar-header {
+            padding-bottom: 0;
+        }
 
-		.navbar-header {
-			padding-bottom: 0;
-		}
+        .navbar-brand {
+            font-family: 'Comfortaa', sans-serif;
+            position: relative;
+            padding: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 2.5em;
+        }
 
-		.navbar-brand {
-			font-family: 'Comfortaa', sans-serif;
-			position: relative;
-			padding: 0;
-			padding-top: 10px;
-			padding-left: 40px;
-			font-size: 2.5em;
-		}
+        nav a {
+            text-transform: uppercase;
+            color: white;
+            text-decoration: none;
+        }
 
-		nav a {
-			text-transform: uppercase;
-			color: white;
-			text-decoration: none;
-		}
+        nav a:hover {
+            color: white;
+        }
 
-		nav a:hover {
-			color: white;
-		}
+        .nav-btn,
+        .nav-btn:hover {
+            text-decoration: none;
+            position: relative;
+        }
 
-		.nav-btn,
-		.nav-btn:hover {
-			text-decoration: none;
-			position: relative;
-		}
+        .nav-btn:hover:after {
+            opacity: 1;
+        }
 
-		.nav-btn:hover:after {
-			opacity: 1;
-		}
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, .3);
+            border-color: transparent;
+            box-shadow: none;
+            border-radius: 5px;
+        }
 
-		.dropdown-menu {
-			background-color: rgba(0, 0, 0, .3);
-			border-color: transparent;
-			box-shadow: none;
-			border-radius: 5px;
-		}
+        .dropdown-menu li>a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
 
-		.dropdown-menu li>a:hover {
-			background-color: rgba(255, 255, 255, 0.3);
-			color: white;
-		}
+        .dropdown-menu li>a {
+            color: white;
+        }
 
-		.dropdown-menu li>a {
-			color: white;
-		}
+        @media screen and (min-width: 769px) {
+            .nav-btn:after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                right: 0px;
+                width: 110px;
+                height: 2px;
+                background: white;
+                opacity: 0;
+                transition: 0.2s all ease-in-out;
+                margin-bottom: 0px;
+            }
+            .dropdown-menu .line {
+                height: 2px;
+                margin-bottom: 9.5px;
+                margin-top: -8px;
+                margin-left: 0 auto;
+                margin-right: 0 auto;
+                overflow: hidden;
+                background-color: white;
+            }
+            p {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                padding: 30px;
+                margin-top: -35px;
+                padding-top: 0px;
+                font-weight: normal;
+                font-size: 14pt;
+            }
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                text-transform: uppercase;
+                vertical-align: top;
+                display: inline-block;
+                padding: 30px;
+                font-weight: bold;
+                font-size: 30pt;
+            }
+        }
 
-		@media screen and (min-width: 769px) {
-			.nav-btn:after {
-				content: '';
-				position: absolute;
-				bottom: 0px;
-				left: 0px;
-				right: 0px;
-				width: 110px;
-				height: 2px;
-				background: white;
-				opacity: 0;
-				transition: 0.2s all ease-in-out;
-				margin-bottom: 0px;
-			}
+        @media screen and (max-width: 768px) {
+            .nav-btn:after {
+                background: transparent;
+            }
+            .dropdown-menu .line {
+                background-color: transparent;
+            }
+            .navbar-collapse {
+                background-color: transparent;
+            }
+            .dropdown-menu li>a:hover {
+                background-color: rgba(255, 255, 255, 0.3);
+                color: white;
+            }
+            p {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                padding: 30px;
+                margin-top: -35px;
+                padding-top: 0px;
+                font-weight: normal;
+                font-size: 12pt;
+            }
+            h1 {
+                font-family: 'Montserrat', sans-serif;
+                text-align: left;
+                text-transform: uppercase;
+                vertical-align: top;
+                display: inline-block;
+                padding: 30px;
+                font-weight: bold;
+                font-size: 24pt;
+            }
+        }
 
-			.dropdown-menu .line {
-				height: 2px;
-				margin-bottom: 9.5px;
-				margin-top: -8px;
-				margin-left: 0 auto;
-				margin-right: 0 auto;
-				overflow: hidden;
-				background-color: white;
-			}
+        .content {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            border-color: rgba(0, 0, 0, 0.3);
+            border-width: 3px;
+            margin: 0 auto;
+            padding-top: 0px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+        }
 
-			p {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				padding: 30px;
-				margin-top: -35px;
-				padding-top: 0px;
-				font-weight: normal;
-				font-size: 14pt;
-			}
+        p>a:hover {
+            text-decoration: none;
+            color: #cccccc;
+        }
 
-			h1 {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				text-transform: uppercase;
-				vertical-align: top;
-				display: inline-block;
-				padding: 30px;
-				font-weight: bold;
-				font-size: 30pt;
-			}
-		}
+        p>a>img {
+            vertical-align: middle;
+        }
 
-		@media screen and (max-width: 768px) {
-			.nav-btn:after {
-				background: transparent;
-			}
+        #footer,
+        #footer p {
+            margin-bottom: 8px;
+            margin-top: 24px;
+            padding: 0px;
+            float: left;
+            text-align: center;
+            width: 100%;
+            font-size: 10pt;
+            color: rgba(255, 255, 255, 0.3);
+        }
 
-			.dropdown-menu .line {
-				background-color: transparent;
-			}
+        .label {
+            margin-left: 2px;
+            vertical-align: top;
+            font-size: 5pt;
+            background-color: transparent;
+            color: red;
+        }
 
-			.navbar-collapse {
-				background-color: transparent;
-			}
+        .form-control,
+        .form-control:focus {
+            background-color: rgba(0, 0, 0, 0.3);
+            border: none;
+            color: white;
+            width: 500px;
+        }
 
-			.dropdown-menu li>a:hover {
-				background-color: rgba(255, 255, 255, 0.3);
-				color: white;
-			}
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-bottom: 10px;
+        }
 
-			p {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				padding: 30px;
-				margin-top: -35px;
-				padding-top: 0px;
-				font-weight: normal;
-				font-size: 12pt;
-			}
+        #form {
+            font-family: 'Montserrat', sans-serif;
+            padding: 30px;
+        }
 
-			h1 {
-				font-family: 'Montserrat', sans-serif;
-				text-align: left;
-				text-transform: uppercase;
-				vertical-align: top;
-				display: inline-block;
-				padding: 30px;
-				font-weight: bold;
-				font-size: 24pt;
-			}
-		}
+        input.btn {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white
+        }
 
-		.content {
-			background-color: rgba(0, 0, 0, 0.3);
-			border-radius: 5px;
-			border-color: rgba(0, 0, 0, 0.3);
-			border-width: 3px;
-			margin: 0 auto;
-			padding-top: 0px;
-			padding-left: 20px;
-			padding-right: 20px;
-			padding-bottom: 15px;
-		}
-
-		p>a:hover {
-			text-decoration: none;
-			color: #cccccc;
-		}
-
-		p>a>img {
-			vertical-align: middle;
-		}
-
-		#footer,
-		#footer p {
-			margin-bottom: 8px;
-			margin-top: 24px;
-			padding: 0px;
-			float: left;
-			text-align: center;
-			width: 100%;
-			font-size: 10pt;
-			color: rgba(255, 255, 255, 0.3);
-		}
-		.label {
-			margin-left: 2px;
-			vertical-align: top;
-			font-size: 5pt;
-			background-color: transparent;
-			color: red;
-		}
-.form-control, .form-control:focus {
-	background-color: rgba(0,0,0,0.3);
-	border: none;
-	color: white;
-	width: 400px;
-}
-h4 {
-	font-family: 'Montserrat', sans-serif;
-	text-align: left;
-	text-transform: uppercase;
-	font-weight: bold;
-		padding-bottom: 10px;
-}
-#form {
-	font-family: 'Montserrat', sans-serif;
-	padding: 30px;
-}
-
-input.btn {
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	border: none;
-	background-color: rgba(0,0,0,0.3);
-	color: white
-}
-input.btn:hover, input.btn:focus {
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	border: none;
-	background-color: rgba(0,0,0,0.1);
-	color: white
-}
-</style>
+        input.btn:hover,
+        input.btn:focus {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.1);
+            color: white
+        }
+    </style>
 </head>
 
 <body>
-	<!-- classes not discussed in lessons:  -->
-	<nav class="navbar">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand">XHI</a>
-				<button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
-				</button>
-			</div>
-			<div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
-				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li class="line"></li>
-							<li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
-							<li><a href="music/vagrant.html">Vagrant</a></li>
-							<li><a href="music/coda.html">Coda</a></li>
-							<li><a href="music/singles.html">Singles</a></li>
-						</ul>
-					</li>
-					<li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-	<div class="container" id="main">
-		<div class="content">
-			<h1>About</h1>
-			<p><br/>Kira Chouinard is an experimental music producer from British Columbia, Canada. She has been working on music seriously for over 5 years, and is currently working under the alias <b>XHI</b> (pronounced "shi"). </p>
+    <!-- classes not discussed in lessons:  -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">XHI</a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#headerNav">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="headerNav" style="border-color:transparent;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-btn dropdown-toggle" style="background-color:transparent;">Music <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="line"></li>
+                            <li><a href="music/lostwords.html">Lost Words<span class="label label-success">New</span></a></li>
+                            <li><a href="music/vagrant.html">Vagrant</a></li>
+                            <li><a href="music/coda.html">Coda</a></li>
+                            <li><a href="music/singles.html">Singles</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-btn" href="about.html" role="button" style="background-color:transparent;">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="main">
+        <div class="content">
+            <h1>About</h1>
+            <p>
+                <br/>Kira Chouinard is an experimental music producer from British Columbia, Canada. She has been working seriously on music for over 5 years, but has explored it throughout her life. She's currently working under the alias XHI (pronounced "shi"). </p>
+            <form method="post" action="https://formspree.io/contactxhi@gmail.com" id="form">
+                <h4>Contact</h4>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name" />
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="email" name="email" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" type="message-box" name="message" placeholder="Message" rows="6"></textarea>
 
-		<form method="post" action="https://formspree.io/contactxhi@gmail.com" id="form">
-			<h4>Contact</h4>
-			<div class="form-group">
-					<input class="form-control" type="text" name="name" placeholder="Name" />
-			</div>
-			<div class="form-group">
-					<input class="form-control" type="email" name="email" placeholder="Your email">
-			</div>
-			<div class="form-group">
-				<textarea class="form-control" type="message-box" name="message" placeholder="Message"></textarea>
-
-			</div>
-    	<input type="submit" value="Send" class="btn btn-default" />
-		</form>
-		</div>
-
-
-		<div id="footer">
-			<p>&copy; 2018 XHI</p>
-		</div>
-	</div>
-
-
+                </div>
+                <input type="submit" value="Send" class="btn btn-default" />
+            </form>
+        </div>
+        <div id="footer">
+            <p>&copy; 2018 XHI</p>
+        </div>
+    </div>
 </body>
-
 </html>
