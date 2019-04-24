@@ -311,18 +311,17 @@ input.btn:hover, input.btn:focus {
 			<h1>About</h1>
 			<p><br/>Kira Chouinard is an experimental music producer from British Columbia, Canada. She has been working on music seriously for over 5 years, and is currently working under the alias <b>XHI</b> (pronounced "shi"). </p>
 
-		<form method="post" action="contact_handler.php" id="form">
+		<form method="post" action="https://formspree.io/contactxhi@gmail.com" id="form">
 			<h4>Contact</h4>
 			<div class="form-group">
-					<label for="email" class="sr-only">Name</label>
-					<input class="form-control" type="text" id="name" placeholder="Name" />
+					<input class="form-control" type="text" name="name" placeholder="Name" />
 			</div>
 			<div class="form-group">
-					<label for="email" class="sr-only">Email</label>
-					<input class="form-control" type="email" id="email" placeholder="Email" />
+					<input class="form-control" type="email" name="email" placeholder="Your email">
 			</div>
 			<div class="form-group">
-				<textarea id="message" type="message-box" class="form-control" placeholder="Message" required="required" data-error="Please leave us a message."></textarea>
+				<textarea class="form-control" type="message-box" name="message" placeholder="Message"></textarea>
+
 			</div>
     	<input type="submit" value="Send" class="btn btn-default" />
 		</form>
