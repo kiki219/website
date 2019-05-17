@@ -225,12 +225,23 @@
 		p>a>img {
 			vertical-align: middle;
 		}
+
 		.label {
 			margin-left: 2px;
 			vertical-align: top;
 			font-size: 5pt;
 			background-color: transparent;
 			color: red;
+		}
+
+		.container img {
+			opacity: 1.0;
+			filter: alpha(opacity=100);
+		}
+
+		.container img:hover {
+			opacity: 0.5;
+			filter: alpha(opacity=40);
 		}
 	</style>
 </head>
@@ -278,4 +289,5 @@
 		</div>
 	</div>
 </body>
+
 </html>
